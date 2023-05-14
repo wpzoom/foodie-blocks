@@ -55,6 +55,27 @@ a:hover {
     text-decoration-thickness: 2px;
 }
 
+.wp-block-comment-template .wp-block-comment-content a,
+.entry-content a {
+    text-decoration: underline;
+}
+
+.wp-block-comment-template .wp-block-comment-content a:hover,
+.entry-content a:hover {
+    text-decoration: none;
+}
+
+.wp-block-heading a,
+.wp-block-post-title a,
+.entry-content a.wp-element-button {
+    text-decoration: none;
+}
+
+.wp-block-heading a:hover,
+.wp-block-post-title a:hover {
+    text-decoration: underline;
+}
+
 ol,
 ul {
     margin: 0;
