@@ -50,27 +50,10 @@ The TGM Plugin Activation library was created by Thomas Griffin and is currently
 Images used in the Demo Content:
 All images are licensed with: CC0 1.0 Universal (CC0 1.0) License
 
-Teeam member images
+Recipe images
 License: CC0 1.0 Universal (CC0 1.0)
 Source:
-https://stocksnap.io/photo/black-girl-Z3NKIVAMLT
-https://stocksnap.io/photo/woman-business-GYS5RYVTKI
-https://stocksnap.io/photo/man-smiling-X6BW9YMWXV
-https://pxhere.com/en/photo/1443457
-https://pxhere.com/en/photo/1449941
-
-About header
-https://stocksnap.io/photo/people-man-PT8C3EOE19
-
-Contact header
-https://stocksnap.io/photo/movietheatre-theater-VHI2O3X89E
-
-Ocean aerial
-https://stocksnap.io/photo/sea-ocean-P9QYJ8AAL8
-
-Services
-https://stocksnap.io/photo/video-camera-RW5R1EB5RC
-https://stocksnap.io/photo/people-man-6O7JXC5DC5
-https://stocksnap.io/photo/people-man-356BERTH29
-https://stocksnap.io/photo/video-production-KV0WLH355C
-https://stocksnap.io/photo/technology-camera-H0O97B44CT
+https://www.foodiesfeed.com/free-food-photo/hot-shakshuka-in-a-cast-iron-pan/
+https://www.foodiesfeed.com/free-food-photo/homemade-artisan-sourdough-bread/
+https://www.foodiesfeed.com/free-food-photo/lemon-basil-sponge-cake/
+https://www.pexels.com/photo/woman-in-black-scoop-neck-shirt-smiling-38554/ - Woman smiling

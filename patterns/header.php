@@ -3,7 +3,7 @@
  * Title: Header
  * Slug: foodie-blocks/header
  * Description: 
- * Categories: 
+ * Categories: header
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 

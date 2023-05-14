@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Inspiro Blocks\n"
+"Project-Id-Version: Foodie Blocks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-14 06:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.6.3; wp-6.1.1\n"
-"X-Domain: inspiro-blocks"
+"X-Domain: foodie-blocks"
 
 #: functions.php:161
 msgid "Blog Posts"
