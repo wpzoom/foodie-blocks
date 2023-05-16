@@ -56,7 +56,8 @@ a:hover {
 }
 
 .wp-block-comment-template .wp-block-comment-content a,
-.entry-content a {
+.entry-content a,
+.entry-content .wp-block-heading a {
     text-decoration: underline;
 }
 
@@ -65,15 +66,17 @@ a:hover {
     text-decoration: none;
 }
 
-.wp-block-heading a,
 .wp-block-post-title a,
 .entry-content a.wp-element-button {
     text-decoration: none;
 }
 
-.wp-block-heading a:hover,
 .wp-block-post-title a:hover {
     text-decoration: underline;
+}
+
+.entry-content .wp-block-heading a:hover {
+    text-decoration: none;
 }
 
 ol,
