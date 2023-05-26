@@ -8,6 +8,30 @@
  * @link    https://www.wpzoom.com/
  */
 
+/**
+ * Define Constants
+ */
+define( 'FOODIE_BLOCKS_THEME_DIR', trailingslashit( get_template_directory() ) );
+
+/**
+ * Enqueues scripts and styles
+ */
+require FOODIE_BLOCKS_THEME_DIR . 'inc/classes/class-foodie-blocks-enqueue-scripts.php';
+
+
+/**
+ * Theme admin notices and info page
+ */
+if ( is_admin() ) {
+    require FOODIE_BLOCKS_THEME_DIR . 'inc/admin-notice.php';
+    require FOODIE_BLOCKS_THEME_DIR . 'inc/theme-info-page.php';
+
+    if ( current_user_can( 'manage_options' ) ) {
+        require FOODIE_BLOCKS_THEME_DIR . 'inc/classes/class-foodie-blocks-notices.php';
+        require FOODIE_BLOCKS_THEME_DIR . 'inc/classes/class-foodie-blocks-notice-review.php';
+    }
+}
+
 
 if ( ! function_exists( 'foodie_blocks_setup' ) ) {
 
@@ -39,19 +63,6 @@ if ( ! function_exists( 'foodie_blocks_setup' ) ) {
 
         register_nav_menus( array( 'primary' => esc_html__( 'Primary Menu', 'foodie-blocks' ) ) );
 
-
-        /**
-         * Use the newer onboarding features.
-         *
-         * @since 2.0.0
-         */
-        add_theme_support(
-            'wpz-onboarding',
-            array(
-                'demo-importer'   => true,
-                'onboarding-tour' => true,
-            )
-        );
 
     }
 }
@@ -303,6 +314,9 @@ function foodie_blocks_register_required_plugins() {
      */
     $plugins = array(
 
+        $recipe_card_plugin,
+
+
         // Recommended plugins from the WordPress Plugin Repository.
         array(
             'name'         => 'The Icon Block',
@@ -334,7 +348,6 @@ function foodie_blocks_register_required_plugins() {
             'required'     => false,
         ),
 
-        $recipe_card_plugin
 
     );
 
@@ -363,10 +376,7 @@ function foodie_blocks_register_required_plugins() {
 }
 
 
-
-
 // Add the markup for the search form
-
 function add_search_form_markup() {
 
         ?>
