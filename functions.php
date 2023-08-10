@@ -263,6 +263,7 @@ function foodie_blocks_theme_fonts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'foodie_blocks_theme_fonts', 1 );
+add_action( 'enqueue_block_editor_assets', 'foodie_blocks_theme_fonts' );
 
 /*
  * Gutenberg Editor CSS
@@ -285,7 +286,9 @@ function foodie_blocks_get_fonts_url() {
 	//Set default theme typography font families
 	$theme_default_typo = array(
 		'inter',
-		'outfit'
+		'outfit',
+		'cormorant-garamond',
+		'dm-sans'
 	);
 
 	$fonts_to_download = array();
