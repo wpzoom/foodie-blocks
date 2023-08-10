@@ -282,6 +282,12 @@ add_action( 'enqueue_block_editor_assets', 'foodie_blocks_gutenberg_editor_css' 
  */
 function foodie_blocks_get_fonts_url() {
 
+	//Set default theme typography font families
+	$theme_default_typo = array(
+		'inter',
+		'outfit'
+	);
+
 	$fonts_to_download = array();
 
     $font_families = array(
@@ -328,11 +334,17 @@ function foodie_blocks_get_fonts_url() {
         'yeseva-one'         => 'Yeseva+One'
     );
 
-	$user_custom_typos = foodie_get_custom_typography();
+	//Get user's saved custom typography
+	$user_custom_typo = foodie_get_custom_typography();
+	
+	//Combine default and custom typography
+	$theme_custom_typo = array_merge( $user_custom_typo, $theme_default_typo );
+	
+	$theme_custom_typo = array_unique( $theme_custom_typo );
 
-	if( !empty( $user_custom_typos ) ) {
-		foreach( $user_custom_typos as $user_custom_typo ) {
-			$fonts_to_download[] = isset( $font_families[ $user_custom_typo ] ) ? $font_families[ $user_custom_typo ] : '';
+	if( !empty( $theme_custom_typo ) ) {
+		foreach( $theme_custom_typo as $value ) {
+			$fonts_to_download[] = isset( $font_families[ $value ] ) ? $font_families[ $value ] : '';
 		}
 
 		$query_args = array(
