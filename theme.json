@@ -407,36 +407,6 @@
 					"fontFamily": "Yeseva One, sans-serif",
 					"name": "Yeseva One",
 					"slug": "yeseva-one"
-				},
-				{
-					"fontFamily": "Fira Sans",
-					"slug": "fira-sans",
-					"fontFace": [
-						{
-							"fontFamily": "Fira Sans",
-							"fontStyle": "normal",
-							"fontWeight": "600",
-							"src": [
-								"file:./assets/fonts/fira-sans_normal_600.ttf"
-							]
-						},
-						{
-							"fontFamily": "Fira Sans",
-							"fontStyle": "italic",
-							"fontWeight": "500",
-							"src": [
-								"file:./assets/fonts/fira-sans_italic_500.ttf"
-							]
-						},
-						{
-							"fontFamily": "Fira Sans",
-							"fontStyle": "normal",
-							"fontWeight": "500",
-							"src": [
-								"file:./assets/fonts/fira-sans_normal_500.ttf"
-							]
-						}
-					]
 				}
 			],
 			"fontSizes": [
