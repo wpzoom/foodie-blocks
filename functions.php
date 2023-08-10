@@ -256,14 +256,16 @@ function foodie_blocks_theme_fonts() {
     if ( $theme_fonts_url ) {
         
 		require_once get_theme_file_path( 'inc/wptt-webfont-loader.php' );
-        
 		wp_enqueue_style( 'foodie-theme-fonts', wptt_get_webfont_url( $theme_fonts_url ), array(), wp_get_theme()->get( 'Version' ) );
+
+		add_editor_style( $theme_fonts_url );
 
     }
 
 }
+add_action( 'admin_init', 'foodie_blocks_theme_fonts', 1 );
 add_action( 'wp_enqueue_scripts', 'foodie_blocks_theme_fonts', 1 );
-add_action( 'enqueue_block_editor_assets', 'foodie_blocks_theme_fonts' );
+add_action( 'enqueue_block_editor_assets', 'foodie_blocks_theme_fonts', 1 );
 
 /*
  * Gutenberg Editor CSS
