@@ -250,15 +250,17 @@ function foodie_extract_font_families( $data = array() ) {
 */
 function foodie_blocks_theme_fonts() {
 	
-	$theme_fonts_url  = foodie_blocks_get_fonts_url();
+	$theme_fonts_url             = foodie_blocks_get_fonts_url();
+	$theme_fonts_url_for_editor  = foodie_blocks_get_fonts_url( true );
 
     // Load Fonts if necessary.
     if ( $theme_fonts_url ) {
         
 		require_once get_theme_file_path( 'inc/wptt-webfont-loader.php' );
+        
 		wp_enqueue_style( 'foodie-theme-fonts', wptt_get_webfont_url( $theme_fonts_url ), array(), wp_get_theme()->get( 'Version' ) );
-
-		add_editor_style( $theme_fonts_url );
+		
+		add_editor_style( $theme_fonts_url_for_editor );
 
     }
 
@@ -280,10 +282,11 @@ function foodie_blocks_gutenberg_editor_css() {
 }
 add_action( 'enqueue_block_editor_assets', 'foodie_blocks_gutenberg_editor_css' );
 
+
 /**
  * Retrieve webfont URL to load fonts locally.
  */
-function foodie_blocks_get_fonts_url() {
+function foodie_blocks_get_fonts_url( $all = false )  {
 
 	//Set default theme typography font families
 	$theme_default_typo = array(
@@ -348,8 +351,13 @@ function foodie_blocks_get_fonts_url() {
 	$theme_custom_typo = array_unique( $theme_custom_typo );
 
 	if( !empty( $theme_custom_typo ) ) {
+
 		foreach( $theme_custom_typo as $value ) {
 			$fonts_to_download[] = isset( $font_families[ $value ] ) ? $font_families[ $value ] : '';
+		}
+
+		if( $all ) {
+			$fonts_to_download = $font_families;
 		}
 
 		$query_args = array(
