@@ -1,9 +1,9 @@
 === Foodie Blocks ===
 Contributors: WPZOOM
 Requires at least: 6.1
-Tested up to: 6.2
+Tested up to: 6.3
 Requires PHP: 7.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Foodie Blocks is a block theme designed specifically for the modern food blogger. This theme adopts the new site editor, offering flexibility and customization options to showcase your culinary journey. With its clean and elegant design, it focuses on visual aesthetics and typography to make your recipes and food photos stand out. The theme is fully GDPR-compliant and doesn't use any external Google Fonts. All fonts are locally hosted. The PRO version bundles 6 Color Schemes and 15+ Block Patterns for Food Blogs. DEMO CONTENT & Documentation can be found here: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#10132; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; https://www.wpzoom.com/documentation/foodie-blocks/
 
 == Changelog ==
+
+= 1.0.3 =
+* Improvements to custom fonts
 
 = 1.0.2 =
 * Added page with theme details in the Dashboard
