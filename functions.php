@@ -258,7 +258,7 @@ function foodie_blocks_theme_fonts() {
         
 		require_once get_theme_file_path( 'inc/wptt-webfont-loader.php' );
         
-		wp_enqueue_style( 'foodie-theme-fonts', wptt_get_webfont_url( $theme_fonts_url ), array(), wp_get_theme()->get( 'Version' ) );
+		wp_enqueue_style( 'foodie-theme-fonts', wptt_get_webfont_url( $theme_fonts_url ), array() );
 		
 		add_editor_style( $theme_fonts_url_for_editor );
 
@@ -350,25 +350,27 @@ function foodie_blocks_get_fonts_url( $all = false )  {
 	
 	$theme_custom_typo = array_unique( $theme_custom_typo );
 
-	if( !empty( $theme_custom_typo ) ) {
+	if( ! empty( $theme_custom_typo ) ) {
 
-		foreach( $theme_custom_typo as $value ) {
-			$fonts_to_download[] = isset( $font_families[ $value ] ) ? $font_families[ $value ] : '';
-		}
+        foreach( $theme_custom_typo as $value ) {
+            if( isset( $font_families[ $value ] ) ) {
+                $fonts_to_download[] = $font_families[ $value ];
+            }
+        }
 
-		if( $all ) {
-			$fonts_to_download = $font_families;
-		}
+        if( $all ) {
+            $fonts_to_download = $font_families;
+        }
 
-		$query_args = array(
-			'family'  => implode( '|', $fonts_to_download ),
-			'subset'  => urlencode( 'latin,latin-ext' ),
-			'display' => urlencode( 'swap' ),
-		);
-	
-		return apply_filters( 'foodie_blocks_get_fonts_url', add_query_arg( $query_args, 'https://fonts.googleapis.com/css' ) );
-	
-	}
+        $query_args = array(
+            'family'  => implode( '|', $fonts_to_download ),
+            'subset'  => urlencode( 'latin,latin-ext' ),
+            'display' => urlencode( 'swap' ),
+        );
+
+        return apply_filters( 'inspiro_blocks_get_fonts_url', add_query_arg( $query_args, 'https://fonts.googleapis.com/css' ) );
+
+    }
 
 	return $fonts_to_download;
 
