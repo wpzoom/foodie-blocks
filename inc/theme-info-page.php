@@ -181,7 +181,7 @@ function foodie_blocks_display_theme_page() {
                                                         </svg> <?php esc_html_e( 'Adding Recipe Cards', 'foodie-blocks' ); ?>
                                                     </h4>
                                                     <p class="about">
-                                                        <?php printf( esc_html__( 'Using the free version of our %1$sRecipe Card Blocks%2$s plugin, you can quickly add recipe cards in your blog posts theme!', 'foodie-blocks' ), '<a href="https://recipecard.io">', '</a>' );  ?>
+                                                        <?php printf( esc_html__( 'Using the free version of our %1$sRecipe Card Blocks%2$s plugin, you can quickly add recipe cards in your blog posts!', 'foodie-blocks' ), '<a href="https://recipecard.io">', '</a>' );  ?>
                                                     </p>
 
                                                     <p class="section_footer">
