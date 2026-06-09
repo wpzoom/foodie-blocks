@@ -258,7 +258,7 @@ function foodie_blocks_theme_fonts() {
         
 		require_once get_theme_file_path( 'inc/wptt-webfont-loader.php' );
         
-		wp_enqueue_style( 'foodie-theme-fonts', wptt_get_webfont_url( $theme_fonts_url ), array() );
+		wp_enqueue_style( 'foodie-theme-fonts', wptt_get_webfont_url( $theme_fonts_url ), array(), wp_get_theme()->get( 'Version' ) );
 		
 		add_editor_style( $theme_fonts_url_for_editor );
 

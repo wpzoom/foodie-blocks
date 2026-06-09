@@ -47,7 +47,7 @@ class Foodie_Blocks_Notice_Review extends Foodie_Blocks_Notices {
 
     		if ( ! $this_notice_was_dismissed ) {
 
-                wp_enqueue_style( 'welcome-notice', get_template_directory_uri() . '/assets/admin/css/welcome-notice.css' );
+                wp_enqueue_style( 'welcome-notice', get_template_directory_uri() . '/assets/admin/css/welcome-notice.css', array(), wp_get_theme()->get( 'Version' ) );
 
     			add_action( 'admin_notices', array( $this, 'review_notice_markup' ) ); // Display this notice.
     		}

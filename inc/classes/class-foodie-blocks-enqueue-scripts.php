@@ -34,7 +34,7 @@ if ( ! class_exists( 'Foodie_Blocks_Enqueue_Scripts' ) ) {
 		 */
 		public function admin_scripts($hook) {
 
-            wp_enqueue_style( 'foodie-blocks-admin', get_template_directory_uri() . '/assets/admin/css/admin.css' );
+            wp_enqueue_style( 'foodie-blocks-admin', get_template_directory_uri() . '/assets/admin/css/admin.css', array(), wp_get_theme()->get( 'Version' ) );
 
             if ( 'appearance_page_page-foodie_blocks' != $hook ) {
 
